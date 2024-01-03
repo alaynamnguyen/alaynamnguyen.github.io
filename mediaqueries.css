@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -18,6 +18,9 @@
   }
   #hamburger-nav {
     display: flex;
+  }
+  main {
+    margin: 0 35px;
   }
   #experience,
   .experience-details-container {
@@ -100,4 +103,4 @@
   .text-container {
     text-align: justify;
   }
-}
+} */
