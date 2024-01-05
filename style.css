@@ -78,6 +78,10 @@ a:hover {
 
 #hamburger-nav {
   display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 .hamburger-menu {
