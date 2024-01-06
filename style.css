@@ -9,6 +9,23 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode,
+.dark-mode p,
+.dark-mode li,
+.dark-mode h2,
+.dark-mode a,
+.dark-mode a:hover {
+  background-color: rgb(37, 37, 37);
+  color: white !important;
+}
+
+.dark-mode .btn {
+  color: white !important;
+  border: white 0.1rem solid;
 }
 
 html {
@@ -21,7 +38,6 @@ p {
 
 li {
   color: rgb(85, 85, 85);
-  margin-left: 1rem;
 }
 
 main {
@@ -103,6 +119,10 @@ a:hover {
   height: 2px;
   background-color: black;
   transition: all 0.3 ease-in-out;
+}
+
+.dark-mode .hamburger-icon span {
+  background-color: white;
 }
 
 .menu-links {
@@ -254,8 +274,8 @@ li {
 
 .exp-content {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
-  gap: 2rem; /* Adjust the gap as needed */
+  align-items: flex-start;
+  gap: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -334,4 +354,76 @@ li {
 
 .email-icon {
   height: 2.5rem;
+}
+
+/* SWITCH */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(179, 54, 102);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(179, 54, 102);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
